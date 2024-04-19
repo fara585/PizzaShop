@@ -472,7 +472,7 @@ itemsP.forEach(pizza => {
     })
 });
 ScrollReveal({
-    reset: true,
+    
     distance: '70px',
     duration: 2500,
     delay: 400,
