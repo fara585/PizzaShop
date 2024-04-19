@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PizzaShop</title>
+        <link rel="stylesheet" href="./css/all.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="css/media.css">
+        <link rel="shortcut icon" href="../Pizzashop/img/menu__argentina.png" type="image/x-icon">
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+        <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    </head>
+
+    <body>
+
+        <nav class="nav" id="nav">
+            <div class="container">
+
+                <div class="nav__content">
+                    <h1 class="nav__content-title">pizzashop</h1>
+
+                    <ul class="nav__content-list nav__menu">
+
+                        <div class="nav__menu-response">
+                            <i class="fas fa-home"></i>
+                            <li><a href="#nav" class="nav__list-items nav__link">Home</a></li>
+                        </div>
+                        <div class="nav__menu-response">
+                            <i class="fal fa-pizza-slice"></i>
+                            <li><a href="#menu" class="nav__list-items nav__link">Menu</a></li>
+                        </div>
+                        <div class="nav__menu-response">
+                            <i class="fas fa-wreath"></i>
+                            <li><a href="#events-top" class="nav__list-items nav__link">Events</a></li>
+                        </div>
+                        <div class="nav__menu-response">
+                            <i class="fas fa-address-card"></i>
+                            <li><a href="#about" class="nav__list-items nav__link">About us</a></li>
+                        </div>
+
+                        <div class="nav__menu-social">
+
+                            <div class="nav__social-top">
+                                <a href="tel:+7 (937) 333-55-33">+7 (937) 333-55-33</a>
+
+                                <div class="nav__top-icons">
+                                    <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-facebook"></i>
+                                </div>
+
+                            </div>
+
+                            <div class="nav__right-payment">
+                                <i class="fab fa-cc-paypal"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                            </div>
+
+                        </div>
+
+                    </ul>
+
+                    <div class="nav__content-right">
+                        <i class="far fa-search icon"></i>
+                        <a href="#" class="nav__right-link">Log in</a>
+                        <i class="far fa-shopping-bag icon"></i>
+
+                        <div class="cart nav__right-checklist">
+
+                            <div class="nav__checklist-top">
+                                <h1 class="nav__content-title">pizzashop</h1>
+                                <button class="nav__top-closeBtn">
+                                    <i class="far fa-pizza-slice"></i>
+                                </button>
+                            </div>
+
+                            <div class="checklist">
+                                <!-- 
+                                <div class="checklist__product">
+
+                                    <div class="checklist__product-left">
+                                        <img src="./img/menu__italian.png" alt="">
+
+                                        <div class="checklist__left-block">
+                                            <h3 class="checklist__center-name">Italian</h3>
+                                            <p class="checklist__center-ingradients">Filling: onion, potato, tomato,
+                                                mushrooms, cheese, olives, meat...</p>
+                                        </div>
+
+                                    </div>
+
+                                    <p class="checklist__product-price">$ <span>8.35</span></p>
+
+                                    <div class="checklist__product-right">
+                                        <button class="checklist__right-btn" data-symbol="-">-</button>
+                                        <output class="checklist__right-output">0</output>
+                                        <button class="checklist__right-btn" data-symbol="+">+</button>
+                                    </div>
+
+                                </div>  -->
+
+                            </div>
+
+                            <div class="nav__checklist-bottom">
+                                <button class="nav__bottom-clear" type="reset">Clear</button>
+                                <div class="nav_bottom-delivery">
+                                    <img src="./img/delivery-bike.png" alt="">
+                                    <p class="nav__delivery-subtitle">Fast delivery: <span>+$6</span></p>
+                                </div>
+                                <output class="nav__bottom-txt">Total:
+                                    <span> $</span><span class="checklist__totalPrice">0</span>
+                                </output>
+                                <button class="nav__bottom-order">Order Now</button>
+                            </div>
+
+                        </div>
+
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+
+                        <div class="search" id="nav__right-search">
+
+                            <form action="" id="nav__search-frm">
+
+                                <i class="far fa-search"></i>
+                                <input type="text" placeholder="What are you looking for?" class="nav__search-inp"
+                                    id="search-input">
+
+                            </form>
+
+                        </div>
+
+                        <div class="nav__right-logIn">
+
+                            <form class="nav__logIn-frm" method="get">
+
+                                <div class="nav__frm-title">
+                                    <h4>Welcome,</h4>
+                                    <p>sign up to continue.</p>
+                                </div>
+
+                                <span id="error"></span>
+
+                                <div class="nav__frm-bottom">
+
+                                    <div class="nav__frm-userBox">
+
+                                        <div class="nav__userBox-block">
+                                            <i class="fas fa-at"></i>
+                                            <input type="email" placeholder="Enter email" class="nav__userBox-inp"
+                                                id="email">
+                                        </div>
+
+                                        <div class="nav__userBox-block">
+                                            <i class="fas fa-lock-alt"></i>
+                                            <input type="password" placeholder="Password" class="nav__userBox-inp"
+                                                id="password" required>
+                                        </div>
+
+                                    </div>
+
+                                    <button class="nav__frm-btn" type="submit">
+                                        Submit
+                                        <span></span>
+                                    </button>
+
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <header class="header">
+            <div class="container">
+
+                <div class="header__content">
+
+                    <div class="header__content-left">
+
+                        <h2 class="title3">The Fastest <br> Pizza <span><img src="./img/Lightning 2.png" alt=""
+                                    class="flash"></span>
+                            Delivery
+                        </h2>
+
+                        <p class="header__left-txt header-txt">We will deliver juicy pizza for your family in 30
+                            minutes, if
+                            the
+                            courier is late - <span>pizza is free!</span></p>
+                        <p class="header__left-txt">Cooking process:</p>
+
+                        <div class="header__left-block">
+                            <img src="./img/header__left-play.png" alt="" class="header__block-img">
+                            <a href=""><i class="far fa-play fa-2x"></i></a>
+                        </div>
+
+
+                        <div class="header__left-button">
+                            <button class="header__button-btn active">To order</button>
+                            <a href="#menu" class="header__button-btn">Pizza-Menu</a>
+                            <img src="./img/long_addow.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="header__content-right">
+                        <img src="./img/pizza_1.png" alt="" class="right__pizza">
+                        <img src="./img/header__right.png" alt="" class="right__image">
+                        <img src="./img/fries_1.png" alt="" class="right__fries">
+                    </div>
+
+                </div>
+
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="container">
+
+                <section class="main__manu" id="menu">
+                    <h3 class="title">Menu</h3>
+
+                    <ul class="main__manu-list">
+                        <li class="main__list-items active">Show All</li>
+                        <li class="main__list-items">Meat</li>
+                        <li><a href="#next__cards" class="main__list-items">Vegetarian</a></li>
+                        <li><a href="#next__cards" class="main__list-items">Sea products</a></li>
+                        <li><a href="#next__cards" class="main__list-items">Mushroom</a></li>
+                    </ul>
+
+                    <div class="main__manu-cards" id="first__cards">
+
+                        <div class="main__cards-card" id="italian">
+                            <span class="main__card-indecator"></span>
+                            <i class="fas fa-heart"></i>
+
+                            <img src="../Pizzashop/img/menu__italian.png" alt="" class="gsap_1">
+
+                            <h3 class="title2">Italian</h3>
+                            <p class="txt2">Oregano, tomato, olives, mozzarella, anchovies, mushrooms</p>
+
+                            <div class="menu__card-btns">
+                                <button class="menu__btns-btn btns-btn" value="iprice22">22</button>
+                                <button class="menu__btns-btn btns-btn active" value="iprice28">28</button>
+                                <button class="menu__btns-btn btns-btn" value="iprice33">33</button>
+                            </div>
+
+                            <a href="" class="manu__card-link">+ Ingridients</a>
+
+                            <div class="manu__price-left">
+                                <span class="menu__left-cost" data-count="8,35">8,35</span>
+                                <p>$</p>
+                            </div>
+
+                            <button class="manu__card-order">Order Now</button>
+
+                        </div>
+
+                        <div class="main__cards-card" id="venecia">
+                            <span class="main__card-indecator"></span>
+                            <i class="fas fa-heart"></i>
+                            <img src="../Pizzashop/img/menu__venecia.png" alt="" class="gsap_1">
+
+                            <h3 class="title2">Venecia</h3>
+                            <p class="txt2">flour, water, salt, fresh yeast and canola oil, tomato</p>
+
+                            <div class="menu__card-btns">
+                                <button class="menu__btns-btn btns-btn2" value="iprice22">22</button>
+                                <button class="menu__btns-btn btns-btn2 active" value="iprice28">28</button>
+                                <button class="menu__btns-btn btns-btn2" value="iprice33">33</button>
+                            </div>
+
+                            <a href="" class="manu__card-link">+ Ingridients</a>
+
+                            <div class="manu__price-left">
+                                <span class="menu__left-cost veneziaPrice" data-count="7,35">7,35</span>
+                                <p>$</p>
+                            </div>
+
+                            <button class="manu__card-order">Order Now</button>
+
+                        </div>
+
+                        <div class="main__cards-card" id="meat">
+                            <span class="main__card-indecator"></span>
+                            <i class="fas fa-heart"></i>
+                            <img src="../Pizzashop/img/menu__meat.png" alt="" class="gsap_1">
+
+                            <h3 class="title2">Meat</h3>
+                            <p class="txt2">savory sausage, all purpose flour, slices bacon, cooked and chopped</p>
+
+                            <div class="menu__card-btns">
+                                <button class="menu__btns-btn btns-btn3" value="iprice22">22</button>
+                                <button class="menu__btns-btn btns-btn3 active" value="iprice28">28</button>
+                                <button class="menu__btns-btn btns-btn3" value="iprice33">33</button>
+                            </div>
+
+                            <a href="" class="manu__card-link">+ Ingridients</a>
+
+                            <div class="manu__price-left">
+                                <span class="menu__left-cost meatPrice" data-count="9,35">9,35</span>
+                                <p>$</p>
+                            </div>
+
+                            <button class="manu__card-order">Order Now</button>
+
+                        </div>
+
+                        <div class="main__cards-card" id="cheese">
+                            <span class="main__card-indecator"></span>
+                            <i class="fas fa-heart"></i>
+                            <img src="../Pizzashop/img/menu__cheese.png" alt="" class="gsap_1">
+
+                            <h3 class="title2">Cheese</h3>
+                            <p class="txt2">An exceptional pizza dough, low-moisture mozzarella, tomato sauce</p>
+
+                            <div class="menu__card-btns">
+                                <button class="menu__btns-btn btns-btn4" value="iprice22">22</button>
+                                <button class="menu__btns-btn btns-btn4 active" value="iprice28">28</button>
+                                <button class="menu__btns-btn btns-btn4" value="iprice33">33</button>
+                            </div>
+
+                            <a href="" class="manu__card-link">+ Ingridients</a>
+
+                            <div class="manu__price-left">
+                                <span class="menu__left-cost cheesePrice" data-count="8,35">8,35</span>
+                                <p>$</p>
+                            </div>
+
+                            <button class="manu__card-order">Order Now</button>
+
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="main__center-pizza">
+                    <img src="./img/popular__bg.png" alt="">
+                    <h3 class="main__pizza-title">MOST POPULAR PIZZA</h3>
+                </section>
+
+                <section class="main__manu-cards next__cards" id="next__cards">
+
+                    <div class="main__cards-card" id="argentina">
+                        <span class="main__card-indecator"></span>
+                        <i class="fas fa-heart"></i>
+                        <img src="../Pizzashop/img/menu__argentina.png" alt="">
+
+                        <h3 class="title2">Argentina</h3>
+                        <p class="txt2">flour, water, yeast, sugar, salt, and oil, crust, sauce, and toppings</p>
+
+                        <div class="menu__card-btns">
+                            <button class="menu__btns-btn btns-btn5" value="iprice22">22</button>
+                            <button class="menu__btns-btn btns-btn5 active" value="iprice28">28</button>
+                            <button class="menu__btns-btn btns-btn5" value="iprice33">33</button>
+                        </div>
+
+                        <a href="" class="manu__card-link">+ Ingridients</a>
+
+                        <div class="manu__price-left">
+                            <span class="menu__left-cost argentinaPrice" data-count="7,35">7,35</span>
+                            <p>$</p>
+                        </div>
+
+                        <button class="manu__card-order">Order Now</button>
+
+                    </div>
+
+                    <div class="main__cards-card" id="mushrooms">
+                        <span class="main__card-indecator"></span>
+                        <i class="fas fa-heart"></i>
+                        <img src="../Pizzashop/img/menu__gribnaya.png" alt="">
+
+                        <h3 class="title2">Gribnaya</h3>
+                        <p class="txt2">sautéed mushrooms, onions and garlic, slivers of lacinato kale</p>
+
+                        <div class="menu__card-btns">
+                            <button class="menu__btns-btn btns-btn6" value="iprice22">22</button>
+                            <button class="menu__btns-btn btns-btn6 active" value="iprice28">28</button>
+                            <button class="menu__btns-btn btns-btn6" value="iprice33">33</button>
+                        </div>
+
+                        <a href="" class="manu__card-link">+ Ingridients</a>
+
+                        <div class="manu__price-left">
+                            <span class="menu__left-cost mushroomsPrice" data-count="6,35">6,35</span>
+                            <p>$</p>
+                        </div>
+
+                        <button class="manu__card-order">Order Now</button>
+
+                    </div>
+
+                    <div class="main__cards-card" id="tomato">
+                        <span class="main__card-indecator"></span>
+                        <i class="fas fa-heart"></i>
+                        <img src="../Pizzashop/img/menu__tomato.png" alt="">
+
+                        <h3 class="title2">Tomato</h3>
+                        <p class="txt2">Tinned Chopped Tomatoes, pizza sauce, tomato puree, garlic cloves
+                        </p>
+
+                        <div class="menu__card-btns">
+                            <button class="menu__btns-btn btns-btn7" value="iprice22">22</button>
+                            <button class="menu__btns-btn btns-btn7 active" value="iprice28">28</button>
+                            <button class="menu__btns-btn btns-btn7" value="iprice33">33</button>
+                        </div>
+
+                        <a href="" class="manu__card-link">+ Ingridients</a>
+
+                        <div class="manu__price-left">
+                            <span class="menu__left-cost tomatoPrice" data-count="7,35">7,35</span>
+                            <p>$</p>
+                        </div>
+
+                        <button class="manu__card-order">Order Now</button>
+
+                    </div>
+
+                    <div class="main__cards-card" id="italy">
+                        <span class="main__card-indecator"></span>
+                        <i class="fas fa-heart"></i>
+                        <img src="../Pizzashop/img/menu__italian2x.png" alt="">
+
+                        <h3 class="title2">Italian x2</h3>
+                        <p class="txt2">Oregano, tomato, olives, mozzarella, anchovies, mushrooms</p>
+
+                        <div class="menu__card-btns">
+                            <button class="menu__btns-btn btns-btn8" value="iprice22">22</button>
+                            <button class="menu__btns-btn btns-btn8 active" value="iprice28">28</button>
+                            <button class="menu__btns-btn btns-btn8" value="iprice33">33</button>
+                        </div>
+
+                        <a href="" class="manu__card-link">+ Ingridients</a>
+
+                        <div class="manu__price-left">
+                            <span class="menu__left-cost italyPrice" data-count="8,35">8,35</span>
+                            <p>$</p>
+                        </div>
+
+                        <button class="manu__card-order">Order Now</button>
+
+                    </div>
+
+                </section>
+
+                <section class="main__events" id="events-top">
+
+                    <div class="main__events__left">
+
+                        <img src="./img/events__left-1.png" alt="">
+
+                        <div class="main__left-content">
+
+                            <h3 class="main__content-title">HOW WE COOKING</h3>
+
+                            <a href="#" class="main__content-link">More</a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="main__events__left main__events-center">
+
+                        <img src="./img/events__left-2.png" alt="">
+
+                        <div class="main__left-content content-center">
+
+                            <h3 class="main__content-title">OUR BLOG</h3>
+
+                            <a href="" class="main__content-link">More</a>
+
+                        </div>
+                    </div>
+
+                    <div class="main__events__right">
+
+                        <h3 class="title">Events</h3>
+
+                        <p class="header__left-txt">There are regular events in our pizzeria that will allow you to
+                            eat
+                            delicious food for a lower price!</p>
+                    </div>
+
+                </section>
+
+                <section class="main__center events__animate">
+
+                    <div class="main__center-content main__content-egg" id="two__pizza">
+
+                        <img src="./img/two__pizza-bg.png" alt="">
+
+                        <div class="main__content-blog ">
+
+                            <h3 class="main__content-title">TWO PIZZA FOR 1 PRICE</h3>
+
+                            <a href="" class="main__content-link">More</a>
+                        </div>
+
+                    </div>
+
+                    <div class="main__center-content main__content-lavaw">
+
+                        <img src="./img/kitchen__tour.png" alt="">
+
+                        <div class="main__content-blog">
+
+                            <h3 class="main__content-title kitchen__tourTitle">KITCHEN TOUR</h3>
+
+                            <a href="" class="main__content-link">More</a>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="main__events-last events__animate">
+
+                    <div class="main__last-content" id="three__pizza-coffeFree">
+
+                        <img src="../Pizzashop/img/free__coffee.png" alt="">
+
+                        <div class="main__content-service main__content-coffee">
+
+                            <h3 class="main__content-title">FREE COFFEE FOR 3 PIZZA</h3>
+
+                            <a href="" class="main__content-link">More</a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="main__last-content">
+
+                        <img src="../Pizzashop/img/our__insta.png" alt="">
+
+                        <div class="main__content-service last__center">
+
+                            <h3 class="main__content-title">OUR INSTAGRAM</h3>
+
+                            <a href="" class="main__content-link">More</a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="main__last-content choosen__pizza">
+
+                        <img src="../Pizzashop/img/where_are_you_choose.png" alt="">
+
+                        <div class="main__content-service last__service">
+
+                            <h3 class="main__content-title">WHERE ARE YOU CHOOSE US?</h3>
+
+                            <a href="" class="main__content-link">More</a>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="main__about-us" id="about">
+
+                    <div class="main__about-left">
+
+                        <h2 class="title">About us</h2>
+
+                        <p class="header__left-txt about__subtitle">In just a couple of years, we have opened 6
+                            outlets
+                            in
+                            different cities:
+                            Kazan, Chelyabinsk, Ufa, Samara, Izhevsk, and in the future we plan to develop the
+                            network
+                            in
+                            other major cities of Russia.</p>
+
+                        <img src="./img/about__us.png" alt="">
+
+                        <p class="header__left-txt about__subtitle2">The kitchen of each point is at least: 400-500
+                            sq.
+                            m.
+                            meters, hundreds
+                            of employees, smoothly performing work in order to receive / prepare / form / deliver
+                            customer
+                            orders on time..</p>
+
+                    </div>
+
+                    <div class="main__about-right">
+                        <img src="../Pizzashop/img/fries_1.png" alt="" class="main__right-friesMini">
+                        <img src="../Pizzashop/img/about__right.png" alt="" class="main__right-centerImg">
+                        <img src="../Pizzashop/img/pizza_1.png" alt="" class="main__right-pizzaMini">
+                    </div>
+
+                </section>
+
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+
+                <div class="footer__content">
+
+                    <div class="footer__content-top">
+
+                        <h1 class="nav__content-title">pizzashop</h1>
+
+                        <div class="footer__center-block">
+
+                            <h4 class="footer__block-title">Home</h4>
+
+                            <ul class="footer__content-list">
+                                <li><a href="#nav" class="footer__list-items">To Order</a></li>
+                                <li><a href="#about" class="footer__list-items">About us</a></li>
+                                <li><a href="#events-top" class="footer__list-items">Events</a></li>
+                                <li><a href="#menu" class="footer__list-items">Menu</a></li>
+                            </ul>
+
+                        </div>
+
+                        <div class="footer__center-block">
+
+                            <h4 class="footer__block-title">Events</h4>
+
+                            <ul class="footer__content-list">
+                                <li><a href="#three__pizza-coffeFree" class="footer__list-items">3 Pizza 1 Free
+                                        Coffee</a></li>
+                                <li><a href="#two__pizza" class="footer__list-items">2 Pizza for 1 Price</a></li>
+                                <li><a href="#events-top" class="footer__list-items">Kitchen Tour</a></li>
+                            </ul>
+
+                        </div>
+
+                        <div class="footer__center-block">
+
+                            <h4 class="footer__block-title">Menu</h4>
+
+                            <ul class="footer__content-list">
+                                <li><a href="#first__cards" class="footer__list-items">Show All</a></li>
+                                <li><a href="#next__cards" class="footer__list-items">Seaproducts</a></li>
+                                <li><a href="#tomato" class="footer__list-items">Vegan</a></li>
+                                <li><a href="#meat" class="footer__list-items">Meat</a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="footer__center-block">
+
+                            <h4 class="footer__block-title">About Us</h4>
+
+                            <ul class="footer__content-list">
+                                <li><a href="#about" class="footer__list-items">Our History</a></li>
+                                <li><a href="#about" class="footer__list-items">Why We?</a></li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    <div class="footer__content-botton">
+
+                        <a href="tel: +7(937)333-55-33" class="footer__left-number">+7 (937) 333-55-33</a>
+
+                        <div class="icon__block">
+
+                            <a href="" class="footer__iconss">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="" class="footer__iconss">
+                                <i class="fab fa-telegram-plane"></i>
+                            </a>
+                            <a href="" class="footer__iconss">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </footer>
+
+        <div class="print">
+
+            <div class="print__header">
+                <img src="../Pizzashop/img/pizza_1.png" alt="">
+                pizzashop
+            </div>
+
+            <div class="print__body">
+
+
+            </div>
+
+            <div class="print__footer"></div>
+
+
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+
+</html>
