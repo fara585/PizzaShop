@@ -229,9 +229,20 @@ clearCheckListProduct.onclick = () => (pizzaProductCheckList.innerHTML = '', piz
 document.querySelector('.nav__content-right .fa-search').onclick = () => (document.querySelector('.search').classList.toggle('active'), openGmail.classList.remove('active'), mainChekList.classList.remove('active'), navMenu.classList.remove('active'));
 
 document.body.addEventListener('click', function (event) {
-
     if (!event.target.closest('.fa-search') && !event.target.closest('.search')) {
         document.querySelector('.search').classList.remove('active');
+    }
+});
+
+document.body.addEventListener('click', function (event) {
+    if (!event.target.closest('.fa-shopping-bag') && !event.target.closest('.nav__right-checklist')) {
+        document.querySelector('.nav__right-checklist').classList.remove('active');
+    }
+});
+
+document.body.addEventListener('click', function (event) {
+    if (!event.target.closest('.nav__right-link') && !event.target.closest('.nav__right-logIn')) {
+        document.querySelector('.nav__right-logIn').classList.remove('active');
     }
 });
 
@@ -463,7 +474,7 @@ gsap.registerPlugin(ScrollTrigger);
 let itemsP = gsap.utils.toArray('.main__cards-card img')
 itemsP.forEach(pizza => {
     gsap.fromTo(pizza, { x: -150, opacity: 0 }, {
-        opacity: 1, x: 0, rotation: 360, duration: 3,
+        opacity: 1, x: 0, rotation: 360, duration: 2,
         scrollTrigger: {
             trigger: pizza,
             toggleActions: "restart pause resume none",
@@ -472,28 +483,28 @@ itemsP.forEach(pizza => {
     })
 });
 ScrollReveal({
-    
     distance: '70px',
     duration: 2500,
     delay: 400,
 });
-ScrollReveal().reveal('.nav__content-title', { duration: 1300, delay: 50, origin: 'left', easing: 'ease', mobile: false });
+ScrollReveal().reveal('.nav__content-title', { duration: 1700, delay: 500, origin: 'left', easing: 'ease', mobile: false });
 ScrollReveal().clean('.nav__checklist-top .nav__content-title');
-ScrollReveal().reveal('.title', { distance: '0px', duration: 1900, delay: 150, origin: 'top', });
-ScrollReveal().reveal('.main__pizza-title', { distance: '0px', duration: 1500, delay: 150, origin: 'top', });
+ScrollReveal().reveal('.title', { distance: '0px', duration: 1900, delay: 200, origin: 'top', });
+ScrollReveal().reveal('.main__pizza-title', { distance: '0px', duration: 1800, delay: 300, origin: 'top', });
 ScrollReveal().reveal('.main__content-title', { distance: '0px', duration: 2700, delay: 100, origin: 'top', });
-ScrollReveal().reveal('.header__content-left', { duration: 1300, delay: 50, origin: 'top', easing: 'ease' });
-ScrollReveal().reveal('.events__animate', { distance: '60px', duration: 1300, delay: 50, origin: 'top', easing: 'ease' });
-ScrollReveal().reveal('.footer__left-number', { duration: 1300, delay: 50, origin: 'right', });
-ScrollReveal().reveal('.right__pizza', { distance: '120px', duration: 1300, delay: 50, origin: 'right', easing: 'ease' });
-ScrollReveal().reveal('.main__right-pizzaMini', { distance: '120px', duration: 1300, delay: 50, origin: 'right', easing: 'ease' });
-ScrollReveal().reveal('.right__fries', { distance: '120px', duration: 1500, delay: 150, origin: 'left', easing: 'ease' });
-ScrollReveal().reveal('.main__right-friesMini', { distance: '120px', duration: 1500, delay: 150, origin: 'left', easing: 'ease' });
-ScrollReveal().reveal('.right__image', { distance: '160px', duration: 1500, delay: 200, origin: 'bottom', easing: 'ease' });
-ScrollReveal().reveal('.main__right-centerImg', { distance: '160px', duration: 1300, delay: 400, origin: 'bottom', easing: 'ease' });
-ScrollReveal().reveal('.main__manu-list li', { duration: 900, delay: 200, origin: 'bottom', interval: 90, easing: 'ease' });
-ScrollReveal().reveal('.footer__iconss', { duration: 1000, delay: 250, origin: 'top', interval: 100, });
-ScrollReveal().reveal('.footer__block-title', { duration: 1000, delay: 250, origin: 'top', interval: 180, easing: 'ease-out' });
+ScrollReveal().reveal('.header__content-left', { duration: 1900, delay: 300, origin: 'top', easing: 'ease' });
+ScrollReveal().reveal('.events__animate', { distance: '60px', duration: 1800, delay: 500, origin: 'top', easing: 'ease' });
+ScrollReveal().reveal('#events-top', { distance: '60px', duration: 1800, delay: 500, origin: 'top', easing: 'ease' });
+ScrollReveal().reveal('.footer__left-number', { duration: 1700, delay: 500, origin: 'right', });
+ScrollReveal().reveal('.right__pizza', { distance: '120px', duration: 1700, delay: 500, origin: 'right', easing: 'ease' });
+ScrollReveal().reveal('.main__right-pizzaMini', { distance: '120px', duration: 1700, delay: 500, origin: 'right', easing: 'ease' });
+ScrollReveal().reveal('.right__fries', { distance: '120px', duration: 1700, delay: 500, origin: 'left', easing: 'ease' });
+ScrollReveal().reveal('.main__right-friesMini', { distance: '120px', duration: 1700, delay: 500, origin: 'left', easing: 'ease' });
+ScrollReveal().reveal('.right__image', { distance: '160px', duration: 1900, delay: 300, origin: 'bottom', easing: 'ease' });
+ScrollReveal().reveal('.main__right-centerImg', { distance: '160px', duration: 1700, delay: 500, origin: 'bottom', easing: 'ease' });
+ScrollReveal().reveal('.main__manu-list li', { duration: 1600, delay: 400, origin: 'bottom', interval: 100, easing: 'ease' });
+ScrollReveal().reveal('.footer__iconss', { duration: 1500, delay: 300, origin: 'top', interval: 100, });
+ScrollReveal().reveal('.footer__block-title', { duration: 1500, delay: 300, origin: 'top', interval: 180, easing: 'ease-out' });
 
 
 
