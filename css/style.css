@@ -946,6 +946,7 @@ body {
 }
 
 .main__pizza-title {
+    width: 100%;
     color: white;
     position: absolute;
     top: 125.07px;
