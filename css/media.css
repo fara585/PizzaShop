@@ -95,9 +95,11 @@
   }
 
   .main__pizza-title {
+    width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -40%);
+    text-align: center;
   }
 
   .main__center-content {
@@ -161,12 +163,6 @@
   .main__cards-card {
     width: 250px;
     height: 450px;
-  }
-
-  .main__pizza-title {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -40%);
   }
 
   .main__about-left {
@@ -351,6 +347,24 @@
     width: 100%;
     font-size: 17px;
   }
+
+  .nav__right-logIn {
+    width: 380px;
+    height: 420px;
+    left: -240%;
+  }
+
+  .nav__right-logIn.active {
+    top: 70px;
+  }
+
+  .nav__logIn-frm {
+    gap: 30px;
+  }
+
+  .nav__frm-bottom {
+    row-gap: 10px;
+  }
 }
 
 @media (max-width: 970px) {
@@ -460,28 +474,6 @@
 
   .main__list-items {
     padding: 19px 45px;
-  }
-
-  .nav__right-logIn {
-    max-width: 310px;
-    max-height: 380px;
-  }
-
-  .nav__right-logIn.active {
-    top: 30px;
-  }
-
-  .nav__frm-bottom {
-    row-gap: 10px;
-  }
-
-  .nav__userBox-block {
-    column-gap: 10px;
-    padding: 9px 10px;
-  }
-
-  #error {
-    font-size: 17px;
   }
 }
 
@@ -615,6 +607,33 @@
   .checklist__right-output {
     font-size: 1.4rem;
   }
+
+  .nav__right-logIn {
+    width: 350px;
+    height: 400px;
+    left: -250%;
+  }
+
+  .nav__logIn-frm {
+    gap: 25px;
+  }
+
+  .nav__frm-userBox {
+    gap: 8px;
+  }
+
+  .nav__userBox-block {
+    column-gap: 8px;
+    padding: 10px 15px;
+  }
+
+  .nav__userBox-block i {
+    font-size: 1rem;
+  }
+
+  .nav__userBox-inp {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 878px) {
@@ -733,45 +752,21 @@
   }
 
   .nav__right-logIn {
-    max-width: 400px;
-    max-height: 320px;
+    width: 320px;
+    height: 380px;
+    left: -230%;
   }
 
-  .nav__frm-title {
-    gap: 2px;
-  }
-
-  .nav__frm-title h4 {
-    font-size: 20px;
-  }
-
-  .nav__frm-title p {
-    font-size: 16px;
-  }
-
-  .nav__right-logIn.active {
-    top: 10px;
-  }
-  
-  .nav__logIn-frm{
-    gap: 15px;
-  }
-
-  .nav__frm-bottom {
-    row-gap: 7px;
-  }
-
-  .nav__frm-userBox {
-    gap: 10px;
+  .nav__logIn-frm {
+    gap: 30px;
   }
 
   .nav__userBox-block {
-    column-gap: 10px;
-    padding: 9px 10px;
+    padding: 8px 10px;
   }
 
   #error {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -1541,6 +1536,34 @@
   .checklist__product-price {
     max-width: 15vw;
   }
+
+  .nav__right-logIn {
+    width: 300px;
+    height: 360px;
+    left: -105%;
+  }
+
+  .nav__frm-title {
+    gap: 5px;
+  }
+
+  .nav__logIn-frm {
+    padding: 30px 20px;
+    gap: 13px;
+  }
+
+  .nav__userBox-block {
+    padding: 7px 10px;
+  }
+
+  #error {
+    font-size: 17px;
+  }
+
+  .nav__frm-btn {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -1882,6 +1905,33 @@
   .main__list-items {
     padding: 15px 33px;
   }
+
+  .nav__right-logIn {
+    width: 270px;
+    height: 330px;
+    left: -80%;
+  }
+
+  .nav__frm-title {
+    gap: 3px;
+  }
+
+  .nav__logIn-frm {
+    padding: 25px 20px;
+    gap: 11px;
+  }
+
+  .nav__frm-title h4 {
+    font-size: 20px;
+  }
+
+  .nav__frm-title p {
+    font-size: 18px;
+  }
+
+  .nav__frm-btn {
+    font-size: 17px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -2029,56 +2079,41 @@
   }
 
   .nav__right-logIn {
-    max-width: 340px;
-    max-height: 400px;
-  }
-
-  .nav__logIn-frm {
-    gap: 20px;
-    padding: 30px 20px;
+    width: 240px;
+    height: 300px;
+    left: -100%;
   }
 
   .nav__frm-title {
-    gap: 7px;
-  }
-
-  .nav__frm-title h4 {
-    font-size: 24px;
-  }
-
-  .nav__frm-title p {
-    font-size: 18px;
-  }
-
-  #error {
-    font-size: 17px;
-  }
-
-  .nav__frm-bottom {
-    row-gap: 20px;
-  }
-
-  .nav__frm-userBox {
-    gap: 12px;
+    gap: 1px;
   }
 
   .nav__userBox-block {
-    column-gap: 10px;
-    padding: 12px 17px;
+    border: 1px solid black;
+  }
+
+  .nav__userBox-block.active {
+    border: 1px solid red;
   }
 
   .nav__userBox-block i {
-    font-size: 1rem;
+    font-size: .8rem;
   }
 
-  .nav__userBox-inp {
+  .nav__logIn-frm {
+    gap: 9px;
+  }
+
+  .nav__frm-title h4 {
+    font-size: 18px;
+  }
+
+  .nav__frm-title p {
     font-size: 16px;
   }
 
-  .nav__frm-btn {
-    padding: 8px 18px;
-    font-size: 17px;
-    letter-spacing: 1px;
+  #error {
+    font-size: 16px;
   }
 }
 
@@ -2244,6 +2279,32 @@
   .checklist__right-output {
     font-size: 0.9rem;
   }
+
+  .nav__right-logIn {
+    width: 210px;
+    height: 270px;
+    left: -80%;
+  }
+
+  .nav__logIn-frm {
+    gap: 10px;
+  }
+
+  .nav__frm-bottom {
+    row-gap: 5px;
+  }
+
+  .nav__frm-btn {
+    font-size: 15px;
+  }
+
+  .nav__frm-title h4 {
+    font-size: 17px;
+  }
+
+  #error {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -2304,53 +2365,14 @@
     padding: 50px 0 60px;
   }
 
-  .nav__right-logIn {
-    max-width: 300px;
-    max-height: 370px;
+  .nav__bottom-order{
+    padding: 6px 7px;
+    font-size: 11px;
   }
 
-  .nav__logIn-frm {
-    gap: 17px;
-    padding: 25px 17px;
-  }
-
-  .nav__frm-title {
-    gap: 5px;
-  }
-
-  .nav__frm-title h4 {
-    font-size: 19px;
-  }
-
-  .nav__frm-title p {
-    font-size: 16px;
-  }
-
-  #error {
-    font-size: 16px;
-  }
-
-  .nav__frm-bottom {
-    row-gap: 18px;
-  }
-
-  .nav__frm-userBox {
-    gap: 10px;
-  }
-
-  .nav__userBox-block {
-    column-gap: 8px;
-    padding: 10px 15px;
-    border: 1px solid black;
-  }
-
-  .nav__userBox-block i {
-    font-size: 0.9rem;
-  }
-
-  .nav__frm-btn {
-    font-size: 16px;
-  }
+  .nav__right-logIn.active {
+    top: 50px;
+}
 }
 
 @media (max-width: 330px) {
@@ -2405,4 +2427,50 @@
   .footer__iconss {
     font-size: 1rem;
   }
+
+  .nav__right-logIn {
+    width: 190px;
+    height: 250px;
+    left: -60%;
+  }
+
+  .nav__userBox-block{
+    column-gap: 3px;
+    padding: 6px 11px;
+  }
+
+  .nav__userBox-block i{
+    font-size: .7rem;
+  }
+
+  .nav__userBox-inp{
+    font-size: 14px;
+  }
+
+  .nav__frm-title p{
+    font-size: 14px;
+  }
+
+  .nav__logIn-frm {
+    padding: 25px 18px 10px;
+    gap: 5px;
+  }
+
+  .nav__frm-btn {
+    font-size: 14px;
+  }
+
+  .nav__frm-title h4 {
+    font-size: 16px;
+  }
+
+  #error{
+    font-size: 13px;
+  }
+
+  .nav__bottom-order{
+    padding: 5px 6px;
+    font-size: 9px;
+  }
+
 }

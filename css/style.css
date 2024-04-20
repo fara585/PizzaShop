@@ -100,6 +100,7 @@ body {
 }
 
 .nav__content-right {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 0.7vw;
@@ -175,24 +176,21 @@ body {
 }
 
 .nav__right-logIn {
-    position: fixed;
-    max-width: 380px;
-    width: 100%;
-    max-height: 450px;
-    height: 100%;
-    top: -200%;
-    left: 50%;
-    transform: translate(-50%);
+    position: absolute;
+    width: 400px;
+    height: 450px;
+    top: -700px;
+    left: -290%;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
     background: linear-gradient(261.69deg, #ff5d29 12.12%, #fe9c1c 86.72%);
     border-radius: 50px;
     border: 2px solid orangered;
     z-index: 1500;
-    transition: 0.7s;
+    transition: 0.5s ease;
 }
 
 .nav__right-logIn.active {
-    top: 100px;
+    top: 90px;
 }
 
 .nav__logIn-frm {
@@ -946,9 +944,8 @@ body {
 }
 
 .main__pizza-title {
-    width: 100%;
-    color: white;
     position: absolute;
+    color: white;
     top: 125.07px;
     left: 379px;
     font-size: 44px;
